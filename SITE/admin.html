@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claudium</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/cdf8a73b8c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!DOCTYPE html>
+</head>
+
+<body class="body_admin">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+  <!--Inicio Nav-->
+  <nav class="navbar navbar-dark stick-top p-3">
+
+    <div class="container-fluid">
+
+      <!--barra-->
+      <button src class="navbar-toggler" style="background-color: #33a3ff54" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--imagem-->
+      <a class="navbar-brand text-primary" id="btn-perfil" type="button" style="align-content: center;"
+        href="login_signup.html">
+        <i class="fa-solid fa-user"></i> Entrar
+      </a>
+
+      <div class="offcanvas offcanvas-start text-bg-dark bg-primary" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title p-2" id="offcanvasDarkNavbarLabel">Claudium</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"> <i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="local.html"><i class="fa-solid fa-location-dot"></i>
+                Localização</a>
+            </li>
+
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="favoritos.html"> <i class="fa-solid fa-heart"></i>
+                  Favoritos</a>
+              </li>
+
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="radar.html"> <i
+                      class="fa-solid fa-earth-americas"></i>
+                    Radar Meteriológico</a>
+                </li>
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="alertas.html"> <i class="fa-solid fa-bell"></i>
+                      Alertas</a>
+                  </li>
+
+
+
+        </div>
+
+        <div class="p-4">
+          <hr id="hr_nav">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="perfil.html#configuracoes"> <i
+                  class="fa-solid fa-gear"></i>
+                Preferências</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="admin.html"> <i class="fa-solid fa-wrench"></i>
+                Página do admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="suporte.html"><i class="fa-solid fa-comments"></i>
+                Fale conosco</a>
+            </li>
+          </ul>
+        </div>
+
+        <br><br>
+
+        <p class="container-fluid p-4" id="nav_copy">&copy;2024 Cloudium | All Rights Reserved</p>
+      </div>
+    </div>
+
+  </nav>
+
+  <!--fim nav-->
+
+
+  <center>
+    <main class="main_admin col-9" id="noticias">
+      <!-- Seção de adicionar notícias -->
+      <section class="add-news section_admin">
+        <h2>Adicionar Nova Notícia de Clima</h2>
+        <form id="newsForm" class="form_admin">
+          <label class="lbl_admin" for="title">Título:</label>
+          <input class="input_admin" type="text" id="title" name="title" required>
+
+          <label class="lbl_admin" for="content">Conteúdo:</label>
+          <textarea class="textarea_admin" id="content" name="content" rows="4" required></textarea>
+
+          <label class="lbl_admin" for="date">Data:</label>
+          <input class="input_admin" type="date" id="date" name="date" required>
+
+          <button class="btn_admin" type="submit">Adicionar Notícia</button>
+        </form>
+      </section>
+
+      <!-- Seção de listar notícias -->
+      <section class="news-list section_admin">
+        <h2>Notícias Recentes</h2>
+        <ul id="newsList">
+          <!-- Lista de notícias será preenchida aqui -->
+        </ul>
+      </section>
+
+      <!-- Seção de reclamações -->
+      <section class="complaint-section section_admin" id="reclamacoes">
+        <h2>Pedidos de suporte</h2>
+        <ul id="complaintList" class="complaint-list">
+          <!-- Lista de reclamações será preenchida aqui -->
+        </ul>
+      </section>
+    </main>
+
+    <!-- Caixa de chat -->
+    <div id="chatBox" class="chat-box">
+      <div class="chat-header">
+        <span id="chatTitle">Chat</span>
+        <button id="closeChat">&times;</button>
+      </div>
+      <div id="chatBody" class="chat-body">
+        <!-- Mensagens do chat aparecerão aqui -->
+      </div>
+      <div class="chat-footer">
+        <input id="chatMessage" type="text" placeholder="Digite sua mensagem...">
+        <button id="sendMessage">Enviar</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('newsForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const title = document.getElementById('title').value;
+        const content = document.getElementById('content').value;
+        const date = document.getElementById('date').value;
+
+        if (title && content && date) {
+          const newsList = document.getElementById('newsList');
+          const listItem = document.createElement('li');
+
+          listItem.innerHTML = `
+            <div class="news-item">
+              <div class="news-header">
+                <strong>${title}</strong>
+                <div class="news-actions">
+                  <i class="fa-solid fa-pen-to-square edit-btn"></i>
+                  <i class="fa-solid fa-trash-can delete-btn"></i>
+                </div>
+              </div>
+              <em>${date}</em>
+              <p>${content}</p>
+            </div>
+          `;
+
+          newsList.appendChild(listItem);
+          document.getElementById('newsForm').reset();
+          addEventListenersToButtons();
+        } else {
+          alert('Por favor, preencha todos os campos.');
+        }
+      });
+
+      function addEventListenersToButtons() {
+        const editButtons = document.querySelectorAll('.edit-btn');
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+
+        editButtons.forEach((button, index) => {
+          button.addEventListener('click', function () {
+            editNews(index);
+          });
+        });
+
+        deleteButtons.forEach((button, index) => {
+          button.addEventListener('click', function () {
+            if (confirm('Você tem certeza de que deseja excluir esta notícia?')) {
+              deleteNews(index);
+            }
+          });
+        });
+      }
+
+      function editNews(index) {
+        const listItem = document.querySelectorAll('#newsList li')[index];
+        const title = listItem.querySelector('strong').textContent;
+        const date = listItem.querySelector('em').textContent;
+        const content = listItem.querySelector('p').textContent;
+
+        document.getElementById('title').value = title;
+        document.getElementById('content').value = content;
+        document.getElementById('date').value = date;
+
+        listItem.remove();
+      }
+
+      function deleteNews(index) {
+        const listItem = document.querySelectorAll('#newsList li')[index];
+        listItem.remove();
+      }
+
+      document.getElementById('complaintList').addEventListener('click', function (event) {
+        if (event.target.classList.contains('response-btn')) {
+          const complaintItem = event.target.closest('.complaint-item');
+          const complaintTitle = complaintItem.querySelector('strong').textContent;
+
+          document.getElementById('chatTitle').textContent = `Chat sobre: ${complaintTitle}`;
+          document.getElementById('chatBox').style.display = 'block';
+        }
+      });
+
+      document.getElementById('closeChat').addEventListener('click', function () {
+        document.getElementById('chatBox').style.display = 'none';
+      });
+
+      document.getElementById('sendMessage').addEventListener('click', function () {
+        const chatBody = document.getElementById('chatBody');
+        const messageInput = document.getElementById('chatMessage');
+        const message = messageInput.value.trim();
+
+        if (message) {
+          const messageDiv = document.createElement('div');
+          messageDiv.textContent = message;
+          chatBody.appendChild(messageDiv);
+          messageInput.value = '';
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }
+      });
+
+      document.getElementById('chatMessage').addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+          document.getElementById('sendMessage').click();
+        }
+      });
+    </script>
+  </center>
+
+
+  <!--Footer Universal-->
+
+  <footer class="footer_uni">
+    <div class="row col">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="suporte.html"><i class="fa-solid fa-comments"></i> Fale conosco</a></li>
+
+      </ul>
+    </div>
+    <p>&copy;2024 Cloudium | All Rights Reserved</p>
+
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button onclick="topFunction()" id="backToTopBtn" title="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+      <script>
+        // Obtém o botão
+        var mybutton = document.getElementById("backToTopBtn");
+
+        // Quando o usuário rolar para baixo 20px do topo da página, mostra o botão
+        window.onscroll = function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        };
+
+        // Quando o usuário clicar no botão, rola para o topo da página
+        function topFunction() {
+          document.body.scrollTop = 0; // Para Safari
+          document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+        }
+      </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="js/sript_weather.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Login">
+
+    <View
+        android:id="@+id/view18"
+        android:layout_width="295dp"
+        android:layout_height="399dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header4" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="112dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Esqueceu sua senha?"
+        android:textColor="#0500FF"
+        android:textIsSelectable="true"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <View
+        android:id="@+id/view23"
+        android:layout_width="157dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="538dp"
+        android:background="@drawable/botao2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header4" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="544dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Entrar"
+        android:textColor="#FF010101"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view23"
+        app:layout_constraintStart_toStartOf="@+id/view23"
+        app:layout_constraintTop_toTopOf="@+id/header4" />
+
+    <View
+        android:id="@+id/view22"
+        android:layout_width="219dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/botaolargo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header4" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="431dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Senha"
+        android:textColor="#9A9A9A"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header4" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="191dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Não possue uma conta? Criar"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view18"
+        app:layout_constraintEnd_toEndOf="@+id/view18"
+        app:layout_constraintStart_toStartOf="@+id/view18" />
+
+    <View
+        android:id="@+id/header4"
+        android:layout_width="0dp"
+        android:layout_height="134dp"
+        android:background="#AD23A5D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view17"
+        android:layout_width="52dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/menu"
+        app:layout_constraintStart_toStartOf="@+id/header4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="85dp"
+        android:fontFamily="@font/roboto"
+        android:text="Cloudium"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view19"
+        android:layout_width="178dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/quadrado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view20"
+        android:layout_width="157dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="177dp"
+        android:background="@drawable/gelatina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view21"
+        android:layout_width="219dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/botaolargo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header4" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Nome do Usuário"
+        android:textColor="#9A9A9A"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view21" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

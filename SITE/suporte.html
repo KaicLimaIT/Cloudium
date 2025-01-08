@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claudium</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/cdf8a73b8c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css"><!DOCTYPE html>
+  <script src="js/style.js"></script>
+  </head>
+  <body class="body_favoritos">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  
+  
+    <!--Inicio Nav-->
+  <nav class="navbar navbar-dark stick-top p-3">
+
+    <div class="container-fluid">
+
+      <!--barra-->
+      <button src class="navbar-toggler" style="background-color: #33a3ff54" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--imagem-->
+      <a class="navbar-brand text-primary" id="btn-perfil" type="button" style="align-content: center;"
+        href="login_signup.html">
+        <i class="fa-solid fa-user"></i> Entrar
+      </a>
+
+      <div class="offcanvas offcanvas-start text-bg-dark bg-primary" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title p-2" id="offcanvasDarkNavbarLabel">Claudium</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"> <i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="local.html"><i class="fa-solid fa-location-dot"></i>
+                Localização</a>
+            </li>
+
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="favoritos.html"> <i class="fa-solid fa-heart"></i>
+                  Favoritos</a>
+              </li>
+
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="radar.html"> <i
+                      class="fa-solid fa-earth-americas"></i>
+                    Radar Meteriológico</a>
+                </li>
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="alertas.html"> <i class="fa-solid fa-bell"></i>
+                      Alertas</a>
+                  </li>
+
+
+
+        </div>
+
+        <div class="p-4">
+          <hr id="hr_nav">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="perfil.html#configuracoes"> <i
+                  class="fa-solid fa-gear"></i>
+                Preferências</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="admin.html"> <i class="fa-solid fa-wrench"></i>
+                Página do admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="suporte.html"><i class="fa-solid fa-comments"></i>
+                Fale conosco</a>
+            </li>
+          </ul>
+        </div>
+
+        <br><br>
+
+        <p class="container-fluid p-4" id="nav_copy">&copy;2024 Cloudium | All Rights Reserved</p>
+      </div>
+    </div>
+
+  </nav>
+
+  <!--fim nav-->
+
+    <!--faq e suporte-->
+<center>
+                
+            </div>
+            <div style="margin-left: 5%;">
+              <div class="accordion_sup">
+                  <center><h1>Seção de ajuda</h1></center><br>
+                  <div class="row">
+                    <div class="col-4">
+                      <a href="suporte.html#reclameaqui" class="link_sup" ><i class="fa-solid fa-comments "></i> Suporte</a>
+                    </div>
+                    <div class="col-4">
+                      <a href="suporte.html#sugestoes" class="link_sup" ><i class="fa-solid fa-pencil "></i> Sugestões</a>
+                    </div>
+                    <div class="col-4">
+                      <a href="suporte.html#FAQ" class="link_sup" ><i class="fa-solid fa-circle-question "></i> FAQ</a>
+                    </div>
+                  </div>
+              </div>  
+            </div>
+
+<br><br><br><br>
+  <!--Reclamacao-->
+
+  <center><h1 class="h1_semana" id="reclameaqui">Suporte</h1></center><br>
+      <div class="container_rec">
+        <!-- Formulário de reclamações -->
+        <div class="form-container ">
+          <h1>Entrar em contato</h1>
+          <form id="complaintForm" class="form_rec">
+            <label class="lbl_rec" for="complaintTitle">Título:</label>
+            <input class="input_rec" type="text" id="complaintTitle" name="complaintTitle" required>
+
+            <label class="lbl_rec" for="complaintContent">Conteúdo:</label>
+            <textarea class="textarea_rec" id="complaintContent" name="complaintContent" rows="4" required></textarea>
+            
+            <label class="lbl_rec" for="complaintContent">Anexar arquivo:</label>
+            <input type="file" id="file_rec" name="file" class="form-input form-input-file">
+
+            <button class="btn_admin" type="submit">Enviar</button>
+          </form>
+
+          <!-- Link para voltar -->
+          <a href="index.html" class="back-link">Voltar para a Página Principal</a>
+        </div>
+
+        <!-- Lista de reclamações -->
+        <div class="list-container">
+          <h2>Mensagem Enviadas</h2>
+          <ul id="complaintList" class="complaint-list">
+            <!-- As reclamações serão listadas aqui -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Caixa de chat -->
+      <div id="chatBox" class="chat-box">
+        <div class="chat-header">
+          <span id="chatTitle">Chat</span>
+          <button id="closeChat" class="close-btn">&times;</button>
+        </div>
+        <div id="chatBody" class="chat-body">
+          <div id="pinnedMessage" class="pinned-message"></div>
+          <!-- Mensagens do chat aparecerão aqui -->
+        </div>
+        <div class="chat-footer">
+          <input class="input_rec" id="chatMessage" type="text" placeholder="Digite sua mensagem...">
+          <button id="sendMessage">Enviar</button>
+        </div>
+      </div><script>
+        document.getElementById('complaintForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+      
+          const title = document.getElementById('complaintTitle').value;
+          const content = document.getElementById('complaintContent').value;
+      
+          if (title && content) {
+            const complaintList = document.getElementById('complaintList');
+            const listItem = document.createElement('li');
+            listItem.classList.add('complaint-item');
+            listItem.textContent = title;
+      
+            // Criar um contêiner para o chat
+            const chatContainer = document.createElement('div');
+            chatContainer.classList.add('chat-box');
+            chatContainer.innerHTML = `
+              <div class="chat-header">
+                <span class="chat-title">Chat sobre: ${title}</span>
+                <button class="close-chat-btn">&times;</button>
+              </div>
+              <div class="chat-body">
+                <div class="pinned-message">Reclamação: ${title} - ${content}</div>
+                <!-- Mensagens do chat aparecerão aqui -->
+              </div>
+              <div class="chat-footer">
+                <input class="chat-message-input" type="text" placeholder="Digite sua mensagem...">
+                <button class="send-message-btn">Enviar</button>
+              </div>
+            `;
+      
+            listItem.addEventListener('click', function () {
+              // Fechar outros chats
+              document.querySelectorAll('.chat-box').forEach(chat => chat.style.display = 'none');
+      
+              // Exibir o chat correspondente
+              chatContainer.style.display = 'block';
+              document.body.appendChild(chatContainer);
+            });
+      
+            // Adicionar evento de fechamento do chat
+            chatContainer.querySelector('.close-chat-btn').addEventListener('click', function () {
+              chatContainer.style.display = 'none';
+            });
+      
+            // Adicionar evento de envio de mensagem
+            chatContainer.querySelector('.send-message-btn').addEventListener('click', function () {
+              const chatBody = chatContainer.querySelector('.chat-body');
+              const messageInput = chatContainer.querySelector('.chat-message-input');
+              const message = messageInput.value.trim();
+      
+              if (message) {
+                const messageDiv = document.createElement('div');
+                messageDiv.textContent = message;
+                chatBody.appendChild(messageDiv);
+                messageInput.value = '';
+                chatBody.scrollTop = chatBody.scrollHeight;
+              }
+            });
+      
+            // Enviar mensagem ao pressionar Enter
+            chatContainer.querySelector('.chat-message-input').addEventListener('keypress', function (event) {
+              if (event.key === 'Enter') {
+                chatContainer.querySelector('.send-message-btn').click();
+              }
+            });
+      
+            complaintList.appendChild(listItem);
+          } else {
+            alert('Por favor, preencha todos os campos.');
+          }
+      
+          // Limpar o formulário
+          document.getElementById('complaintForm').reset();
+        });
+      </script>
+      
+      
+<br><br><br>
+
+<!--Sugestões-->
+
+<center><h1 class="h1_semana" id="sugestoes">Sugestões</h1></center><br>
+<div class="form-container_sugestoes">
+    <form action="processar_sugestao.php" method="post">
+        <label class="label_sugestoes" for="nome">Nome:</label>
+        <input class="input_sugestoes" type="text" id="nome" name="nome" required>
+
+        <label class="label_sugestoes" for="email">Email:</label>
+        <input class="input_sugestoes" type="email" id="email" name="email" required>
+
+        <label class="label_sugestoes"for="sugestao">Sugestão:</label>
+        <textarea class="textarea_sugestoes" id="sugestao" name="sugestao" rows="4" required></textarea>
+
+        <label class="label_sugestoes" for="avaliacao">Classificação (1 a 5):</label>
+        <select class="select_sugestoes"id="avaliacao" name="avaliacao">
+            <option class="option_sugestoes" value="1">1 - Muito Ruim</option>
+            <option class="option_sugestoes" value="2">2 - Ruim</option>
+            <option class="option_sugestoes" value="3">3 - Regular</option>
+            <option class="option_sugestoes" value="4">4 - Bom</option>
+            <option class="option_sugestoes" value="5">5 - Excelente</option>
+        </select>
+
+        <label class="label_sugestoes" for="comentarios">Comentários adicionais:</label>
+        <textarea class="textarea_sugestoes" id="comentarios" name="comentarios" rows="3"></textarea>
+
+        <button class="button_sugestoes" type="submit">Enviar Sugestão</button>
+    </form>
+</div>
+<br><br><br>
+<!--FAQ-->
+
+  <center>
+      <div class="accordion_faq"><br>
+        <center><h1 id="FAQ" style="color: black;">Perguntas Frequentes</h1></center>
+        <br>
+        <ul class="ul_faq">
+            <li class="li_faq">
+                <input class="inp_faq" type="checkbox" checked>
+                <i class="arrow"></i>
+                <h2 class="h2_faq">O que é o Cloudium?</h2>
+                <p class="p_faq">É um aplicativo e site meteorológico com o intuito de facilitar o dia a dia e informar sobre possíveis
+                  catástrofes climáticas no local onde o usuário se encontra.
+                </p>
+            </li>
+            <li class="li_faq">
+                <input class="inp_faq" type="checkbox" checked>
+                <i class="arrow"></i>
+                <h2 class="h2_faq">Qual o propósito desse site?</h2>
+                <p class="p_faq">Nossa inspiração veio da necessidade de evitar tragédias como a que ocorreu no Rio Grande do Sul, onde eventos climáticos extremos causaram grandes perdas. Queremos que o site seja uma ferramenta acessível para informar e proteger a população, permitindo que todos tenham acesso a alertas meteorológicos precisos e em tempo real. Assim, esperamos ajudar a salvar vidas e minimizar danos durante situações de risco.</p>
+            </li>
+            <li class="li_faq">
+                <input class="inp_faq" type="checkbox" checked>
+                <i class="arrow"></i>
+                <h2 class="h2_faq">Que tipos de alerta meteorológico são emitidos e como posso recebê-los?</h2>
+                <p class="p_faq"><p>Emitimos alertas de chuva, tempestades, frio extremo, calor excessivo, alta/baixa umidade, neve, granizo, ventos fortes, poluição e alergênicos. Para receber, basta criar uma conta e ativar os alertas desejados.</p>
+           
+            </li>
+            <li class="li_faq">
+                <input class="inp_faq" type="checkbox" checked>
+                <i class="arrow"></i>
+                <h2 class="h2_faq">Quais as diferenças entre o Cloudium e um site/app de clima já existente?</h2>
+                <p class="p_faq">Nosso site combina alertas personalizados, um radar meteorológico avançado e um sistema integrado de alertas para fenômenos climáticos e outros riscos. Além disso, temos um carrossel de notícias atualizado sobre o clima, trazendo informações e análises relevantes para manter você sempre bem informado.</p>
+            </li>
+        </ul>
+      </div>
+  
+  </center>
+
+
+  <!--Footer Universal-->
+
+  <footer class="footer_uni">
+    <div class="row col">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="suporte.html"><i class="fa-solid fa-comments"></i> Fale conosco</a></li>
+
+      </ul>
+    </div>
+    <p>&copy;2024 Cloudium | All Rights Reserved</p>
+
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button onclick="topFunction()" id="backToTopBtn" title="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+      <script>
+        // Obtém o botão
+        var mybutton = document.getElementById("backToTopBtn");
+
+        // Quando o usuário rolar para baixo 20px do topo da página, mostra o botão
+        window.onscroll = function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        };
+
+        // Quando o usuário clicar no botão, rola para o topo da página
+        function topFunction() {
+          document.body.scrollTop = 0; // Para Safari
+          document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+        }
+      </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="js/sript_weather.js"></script>
+</body>
+
+</html>

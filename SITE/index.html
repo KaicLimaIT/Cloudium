@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claudium</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/cdf8a73b8c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body class="body_index">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+  <!--Inicio Nav-->
+  <nav class="navbar navbar-dark stick-top p-3">
+
+    <div class="container-fluid">
+
+      <!--barra-->
+      <button src class="navbar-toggler" style="background-color: #33a3ff54" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--imagem-->
+      <a class="navbar-brand text-primary" id="btn-perfil" type="button" style="align-content: center;"
+        href="login_signup.html">
+        <i class="fa-solid fa-user"></i> Entrar
+      </a>
+
+      <div class="offcanvas offcanvas-start text-bg-dark bg-primary" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title p-2" id="offcanvasDarkNavbarLabel">Claudium</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"> <i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="local.html"><i class="fa-solid fa-location-dot"></i>
+                Localização</a>
+            </li>
+
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="favoritos.html"> <i class="fa-solid fa-heart"></i>
+                  Favoritos</a>
+              </li>
+
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="radar.html"> <i
+                      class="fa-solid fa-earth-americas"></i>
+                    Radar Meteriológico</a>
+                </li>
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="alertas.html"> <i class="fa-solid fa-bell"></i>
+                      Alertas</a>
+                  </li>
+
+
+
+        </div>
+
+        <div class="p-4">
+          <hr id="hr_nav">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="perfil.html#configuracoes"> <i
+                  class="fa-solid fa-gear"></i>
+                Preferências</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="admin.html"> <i class="fa-solid fa-wrench"></i>
+                Página do admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="suporte.html"><i class="fa-solid fa-comments"></i>
+                Fale conosco</a>
+            </li>
+          </ul>
+        </div>
+
+        <br><br>
+
+        <p class="container-fluid p-4" id="nav_copy">&copy;2024 Cloudium | All Rights Reserved</p>
+      </div>
+    </div>
+
+  </nav>
+
+  <!--fim nav-->
+
+  <!-- Início do container principal -->
+  <center>
+    <main class="p-5">
+      <div class="row">
+        <div class="col-6"><br><br>
+
+          <div id="clima_api" style="margin-top: 20px; width: 80%;">
+
+            <form id="search" action="" style="border-color: white; background-color: rgba(255, 255, 255, 0.219);">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <input type="search" name="city_name" id="city_name" placeholder="buscar cidade"
+                style="color: rgba(23, 24, 31, 0.822);">
+
+              <button type="submit" style="color: rgba(23, 24, 31, 0.822);">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+
+            <div id="weather">
+              <h1 id="title"> São Bernardo, BR</h1>
+
+              <br>
+              <div id="infos">
+                <div id="temp">
+                  <img id="temp_img" src="img/moon.png" alt="">
+
+                  <div>
+                    <p id="temp_value">
+                      6 <sup>°C</sup>
+                    </p>
+                    <p id="temp_description">
+                      Céu limpo
+                    </p>
+                  </div>
+                </div>
+
+                <div id="other_infos">
+                  <div class="info">
+                    <i id="temp_max_icon" class="fa-solid fa-temperature-high"></i>
+
+                    <div>
+                      <h2>Temp. max</h2>
+
+                      <p id="temp_max">
+                        10 <sup>°C</sup>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <i id="temp_min_icon" class="fa-solid fa-temperature-low"></i>
+
+                    <div>
+                      <h2>Temp. min</h2>
+
+                      <p id="temp_min">
+                        5 <sup>°C</sup>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <i id="humidity_icon" class="fa-solid fa-droplet"></i>
+
+                    <div>
+                      <h2>Humidade</h2>
+
+                      <p id="humidity">
+                        30%
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <i id="wind_icon" class="fa-solid fa-wind"></i>
+
+                    <div>
+                      <h2>Vento</h2>
+
+                      <p id="wind">
+                        50 km/hr
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="alert">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-6">
+
+          <center>
+            <h1 style="color: white;">Notícias</h1>
+          </center>
+          <br>
+          <!-- Carrossel -->
+          <div id="carouselExampleDark" class="carousel carousel-dark slide col-10" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2500">
+                <img id="img_index_car" src="img/gif_golfinhos.gif" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="background-color: rgba(240, 248, 255, 0.68);">First slide label</h5>
+                  <p style="background-color: rgba(240, 248, 255, 0.68);">Some representative placeholder content for
+                    the
+                    first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2500">
+                <img id="img_index_car" src="img/gif_perfil.gif" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="background-color: rgba(240, 248, 255, 0.68);">Second slide label</h5>
+                  <p style="background-color: rgba(240, 248, 255, 0.68);">Some representative placeholder content for
+                    the
+                    second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2500">
+                <img id="img_index_car" src="img/gif_perfil2.gif" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="background-color: rgba(240, 248, 255, 0.68);">Third slide label</h5>
+                  <p style="background-color: rgba(240, 248, 255, 0.68);">Some representative placeholder content for
+                    the
+                    third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </center>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="js/sript_weather.js"></script>
+
+
+
+  </div>
+
+  <br><br>
+
+
+  <!--Inicio pop-up-->
+
+  <div class="index_popup container-fluid p-5">
+    <div class="col">
+
+      <h2 id="titulo_popup"> Gostou do nosso site?</h2>
+      <p>Então que tal baixar o nosso app e ter nosso aplixativo sempre a mão?!</p>
+
+
+      <!-- Botão que abre o popup -->
+      <button id="openModalBtn" class="open-btn"><i class="fa-brands fa-android"></i> Baixe aqui!</button>
+
+      <!-- O Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+          <div class="col">
+            <span class="modal-title">Baixe nosso app</span>
+            <span class="close">&times;</span>
+          </div>
+          <p>Disponível já no android, nosso app metereológico!</p>
+          <center><button class="app"><i class="fa-brands fa-android"></i></button></center>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Pega o modal
+    var modal = document.getElementById("myModal");
+
+    // Pega o botão que abre o modal
+    var btn = document.getElementById("openModalBtn");
+
+    // Pega o elemento <span> que fecha o modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Quando o usuário clicar no botão, abre o modal
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // Quando o usuário clicar no <span> (x), fecha o modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // Quando o usuário clicar fora do modal, fecha o modal
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+  <br><br>
+
+
+  <!--Inicio do card-->
+
+  <main class="uni-faq p-3">
+
+
+    <div class="col-md-12 p-3">
+      <center>
+        <br>
+        <h3 id="uni-faq-title">Perguntas Frequentes</h3>
+      </center>
+    </div>
+
+    <br>
+
+   
+      <div class="row">
+        <div class="col-md-3">
+          <img class="mascote" src="img/mascota.png" width="50%">
+        </div>
+
+        <div class="col-md-8">
+
+          <section class="uni-faq-item">
+            <button class="uni-faq-question" onclick="toggleAnswer(0)">O que é o Cloudium?</button>
+            <div class="uni-faq-answer" id="answer-0">
+              <p> É um aplicativo e site meteorológico com o intuito de facilitar o dia a dia e informar sobre possíveis
+                catástrofes climáticas no local onde o usuário se encontra.</p>
+            </div>
+          </section>
+
+          <section class="uni-faq-item">
+            <button class="uni-faq-question" onclick="toggleAnswer(1)">Qual o propósito desse site?</button>
+            <div class="uni-faq-answer" id="answer-1">
+              <p>Nossa inspiração veio da necessidade de evitar tragédias como a que ocorreu no Rio Grande do Sul, onde eventos climáticos extremos causaram grandes perdas. Queremos que o site seja uma ferramenta acessível para informar e proteger a população, permitindo que todos tenham acesso a alertas meteorológicos precisos e em tempo real. Assim, esperamos ajudar a salvar vidas e minimizar danos durante situações de risco.</p>
+            </div>
+          </section>
+
+          <section class="uni-faq-item">
+            <button class="uni-faq-question" onclick="toggleAnswer(2)">Que tipos de alerta meteorológico são emitidos e como posso recebê-los?</button>
+            <div class="uni-faq-answer" id="answer-2">
+              <p>Emitimos alertas de chuva, tempestades, frio extremo, calor excessivo, alta/baixa umidade, neve, granizo, ventos fortes, poluição e alergênicos. Para receber, basta criar uma conta e ativar os alertas desejados.</p>
+            </div>
+          </section>
+
+          <section class="uni-faq-item">
+            <button class="uni-faq-question" onclick="toggleAnswer(3)">Quais as diferenças entre o Cloudium e um site/app de clima já existente?</button>
+            <div class="uni-faq-answer" id="answer-3">
+              <p>Nosso site combina alertas personalizados, um radar meteorológico avançado e um sistema integrado de alertas para fenômenos climáticos e outros riscos. Além disso, temos um carrossel de notícias atualizado sobre o clima, trazendo informações e análises relevantes para manter você sempre bem informado.</p>
+            </div>
+          </section>
+
+  </main>
+  
+
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+
+    tabs.forEach(tab => tab.addEventListener('click', () => tabClicked(tab)));
+
+    const tabClicked = (tab) => {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      tab.classList.add('active');
+
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('show'));
+
+      const contentId = tab.getAttribute('content-id');
+      const content = document.getElementById(contentId);
+
+      content.classList.add('show');
+    }
+
+    const currentActiveTab = document.querySelector('.tab-btn.active');
+    tabClicked(currentActiveTab);
+
+    //Perguntas
+
+    function toggleAnswer(index) {
+      const answerElement = document.getElementById(`answer-${index}`);
+
+      if (answerElement.style.display === "block") {
+        answerElement.style.display = "none";
+      } else {
+        answerElement.style.display = "block";
+      }
+    }
+
+
+
+  </script>
+
+
+
+  <!--Footer Universal-->
+
+  <footer class="footer_uni">
+    <div class="row col">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="suporte.html"><i class="fa-solid fa-comments"></i> Fale conosco</a></li>
+
+      </ul>
+    </div>
+    <p>&copy;2024 Cloudium | All Rights Reserved</p>
+
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button onclick="topFunction()" id="backToTopBtn" title="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+      <script>
+        // Obtém o botão
+        var mybutton = document.getElementById("backToTopBtn");
+
+        // Quando o usuário rolar para baixo 20px do topo da página, mostra o botão
+        window.onscroll = function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        };
+
+        // Quando o usuário clicar no botão, rola para o topo da página
+        function topFunction() {
+          document.body.scrollTop = 0; // Para Safari
+          document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+        }
+      </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="js/sript_weather.js"></script>
+</body>
+
+</html>

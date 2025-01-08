@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ActivityRegistro"
+    tools:layout_editor_absoluteX="-17dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <View
+        android:id="@+id/header2"
+        android:layout_width="0dp"
+        android:layout_height="134dp"
+        android:background="#AD23A5D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="52dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/menu"
+        app:layout_constraintStart_toStartOf="@+id/header2"
+        app:layout_constraintTop_toTopOf="@+id/header2" />
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:fontFamily="@font/roboto"
+        android:text="Cloudium"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/header2"
+        app:layout_constraintTop_toTopOf="@+id/header2" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="295dp"
+        android:layout_height="399dp"
+        android:layout_marginTop="232dp"
+        android:background="@drawable/main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Cadastro"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCadUser"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="259dp"
+        android:background="@drawable/botaolargo"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="Nome do Usuário"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:textColor="#9A9A9A"
+        app:layout_constraintEnd_toEndOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/header2" />
+
+    <EditText
+        android:id="@+id/txtCadEmail"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="324dp"
+        android:background="@drawable/botaolargo"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColor="#9A9A9A"
+        app:layout_constraintEnd_toEndOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCadSenha"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="389dp"
+        android:background="@drawable/botaolargo"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textColor="#9A9A9A"
+        app:layout_constraintEnd_toEndOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/header2" />
+
+    <EditText
+        android:id="@+id/txtCadConfirmaSenha"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="454dp"
+        android:background="@drawable/botaolargo"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="Confirme a senha"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textColor="#9A9A9A"
+        app:layout_constraintEnd_toEndOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/header2" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="65dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/kuromi"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/header2" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="157dp"
+        android:layout_height="48dp"
+        android:background="@drawable/botao2"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Cadastre-se"
+        android:textAllCaps="false"
+        android:textColor="#FF010101"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="@+id/view9"
+        app:layout_constraintTop_toBottomOf="@+id/cbxTermos" />
+
+    <CheckBox
+        android:id="@+id/cbxTermos"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@android:color/transparent"
+        android:button="@drawable/custom_checkbox"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingLeft="5px"
+        android:paddingRight="40px"
+        android:text="Li e concordo com os Termos e Condições de Uso."
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="@+id/view9"
+        app:layout_constraintTop_toBottomOf="@+id/lblCadConfirmaSenha" />
+
+    <TextView
+        android:id="@+id/lblCadEmail"
+        android:layout_width="251dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCadEmail" />
+
+    <TextView
+        android:id="@+id/lblCadSenha"
+        android:layout_width="250dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCadSenha" />
+
+    <TextView
+        android:id="@+id/lblCadConfirmaSenha"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCadConfirmaSenha" />
+
+    <TextView
+        android:id="@+id/lblRetUser"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCadUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

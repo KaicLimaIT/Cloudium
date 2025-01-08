@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloudium</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/cdf8a73b8c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="body-login">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+ 
+  <!--Inicio Nav-->
+  <nav class="navbar navbar-dark stick-top p-3">
+
+    <div class="container-fluid">
+
+      <!--barra-->
+      <button src class="navbar-toggler" style="background-color: #33a3ff54" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--imagem-->
+      <a class="navbar-brand text-primary" id="btn-perfil" type="button" style="align-content: center;"
+        href="login_signup.html">
+        <i class="fa-solid fa-user"></i> Entrar
+      </a>
+
+      <div class="offcanvas offcanvas-start text-bg-dark bg-primary" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title p-2" id="offcanvasDarkNavbarLabel">Claudium</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"> <i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="local.html"><i class="fa-solid fa-location-dot"></i>
+                Localização</a>
+            </li>
+
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="favoritos.html"> <i class="fa-solid fa-heart"></i>
+                  Favoritos</a>
+              </li>
+
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="radar.html"> <i
+                      class="fa-solid fa-earth-americas"></i>
+                    Radar Meteriológico</a>
+                </li>
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="alertas.html"> <i class="fa-solid fa-bell"></i>
+                      Alertas</a>
+                  </li>
+
+
+
+        </div>
+
+        <div class="p-4">
+          <hr id="hr_nav">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="perfil.html#configuracoes"> <i
+                  class="fa-solid fa-gear"></i>
+                Preferências</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="admin.html"> <i class="fa-solid fa-wrench"></i>
+                Página do admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="suporte.html"><i class="fa-solid fa-comments"></i>
+                Fale conosco</a>
+            </li>
+          </ul>
+        </div>
+
+        <br><br>
+
+        <p class="container-fluid p-4" id="nav_copy">&copy;2024 Cloudium | All Rights Reserved</p>
+      </div>
+    </div>
+
+  </nav>
+
+  <!--fim nav-->
+
+  <br><br>
+
+<header class="header_login">
+  <div class="container-fluid p-4">
+      <h1 class="title_login" style="text-align: center;">Entre com sua Conta</h1>
+</header>
+
+<!--Login/cadastro-->
+
+    <section class="forms-section">
+      <div class="forms">
+        <div class="form-wrapper is-active">
+          <button type="button" class="switcher switcher-login">
+            Login
+            <span class="underline"></span>
+          </button>
+          <form class="form form-login">
+            <fieldset>
+              <legend>Please, enter your email and password for login.</legend>
+              <div class="input-block">
+                <label for="login-email">E-mail</label>
+                <input id="login-email" type="email" required>
+              </div>
+              <div class="input-block">
+                <label for="login-password">Senha</label>
+                <input id="login-password" type="password" required>
+              </div>
+              <div class="input-block">
+                  <label for="login-password"><a href="#" id="esqueci-link">esqueci a senha</a></label>
+              </div>
+              
+              
+            <center><button type="button" class="btn btn-secondary_login btn-1"
+                                onclick="Entrar()">Entrar</button></center>
+            </fieldset>
+          </form>
+        </div>
+        <div class="form-wrapper">
+          <button type="button" class="switcher switcher-signup">
+            Sign Up
+            <span class="underline"></span>
+          </button>
+          <form class="form form-signup">
+            <fieldset>
+              <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+              <div class="input-block">
+                <label for="signup-email">E-mail</label>
+                <input id="signup-email" type="email" required>
+              </div>
+              <div class="input-block">
+                <label for="signup-password">Senha</label>
+                <input id="signup-password" type="password" required>
+              </div>
+              <div class="input-block">
+                <label for="signup-password-confirm">Confirme a senha</label>
+                <input id="signup-password-confirm" type="password" required>
+              </div>
+
+              <div class="checkbox_login">
+                <label>
+                  <input type="checkbox" id="agree-checkbox"> Eu concordo com os <a href="#" id="terms-link">termos de uso</a>
+                </label>
+              </div><br>
+
+            <center><button type="button" class="btn btn-secondary_login btn-1"
+                                onclick="Cadastrar()">Cadastrar</button></center>
+                                
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Pop-up de termos de uso -->
+    <div class="popup-overlay" id="popup-overlay" ></div>
+    <div class="popup" id="terms-popup" style="width: 50%; height: 360px;">
+        <span class="close-btn" id="close-popup">&times;</span>
+        <h2>Termos e Condições de Uso</h2>
+        <p>
+            <br><br>
+
+            Última atualização: [Data]
+
+            Bem-vindo ao [Nome do Aplicativo] ("App"). Estes Termos e Condições de Uso ("Termos") regem o acesso e o uso do nosso aplicativo e dos serviços fornecidos por meio dele. Ao acessar ou usar o App, você concorda em cumprir e ficar vinculado a estes Termos. Se você não concorda com estes Termos, não use o App.
+
+            1. Aceitação dos Termos
+
+            Ao baixar, acessar ou usar o App, você concorda com estes Termos e com nossa Política de Privacidade. Se você não concordar com qualquer parte destes Termos, deve desinstalar o App e interromper o uso imediatamente.
+
+            2. Modificações dos Termos
+
+            Podemos alterar estes Termos a qualquer momento. Quaisquer modificações entrarão em vigor imediatamente após a publicação no App. É sua responsabilidade revisar os Termos periodicamente. O uso contínuo do App após qualquer alteração constitui sua aceitação dos Termos modificados.
+
+            3. Uso do Aplicativo
+
+            3.1 Licença de Uso: Concedemos a você uma licença limitada, não exclusiva, intransferível e revogável para usar o App para fins pessoais e não comerciais, de acordo com estes Termos.
+
+            3.2 Restrições: Você concorda em não: (i) modificar, reproduzir, distribuir ou criar obras derivadas do App; (ii) usar o App para fins ilegais ou não autorizados; (iii) tentar acessar, descompilar, desmontar ou reverter engenharia o App; (iv) interferir ou interromper o funcionamento do App ou dos servidores que o hospedam.
+
+            4. Conteúdo e Dados
+
+            4.1 Precisão das Informações: O App fornece informações meteorológicas baseadas em dados de terceiros. Embora nos esforcemos para garantir a precisão das informações fornecidas, não garantimos que todos os dados estejam sempre corretos ou atualizados. Você deve verificar as condições meteorológicas com fontes adicionais se necessário.
+
+            4.2 Propriedade: Todo o conteúdo, incluindo, mas não se limitando a, textos, gráficos, imagens, logos e dados fornecidos pelo App, são de propriedade do [Nome da Empresa] ou de seus licenciadores e estão protegidos por direitos autorais e outras leis de propriedade intelectual.
+
+            5. Privacidade
+
+            Sua privacidade é importante para nós. Nossa Política de Privacidade, disponível em [link para a política de privacidade], explica como coletamos, usamos e protegemos suas informações pessoais.
+
+            6. Responsabilidade e Isenção
+
+            6.1 Limitação de Responsabilidade: Na medida permitida pela lei aplicável, o [Nome da Empresa] não será responsável por qualquer dano indireto, incidental, especial ou consequencial resultante do uso ou incapacidade de usar o App.
+
+            6.2 Isenção de Garantias: O App é fornecido "no estado em que se encontra", sem garantias de qualquer tipo, expressas ou implícitas. Não garantimos que o App estará livre de erros ou interrupções.
+
+            7. Encerramento
+
+            Podemos suspender ou encerrar sua conta e acesso ao App a qualquer momento, com ou sem motivo, se acreditarmos que você violou estes Termos.
+
+            8. Lei Aplicável e Resolução de Conflitos
+
+            8.1 Lei Aplicável: Estes Termos serão regidos e interpretados de acordo com as leis [jurisdição aplicável].
+
+            8.2 Resolução de Conflitos: Qualquer disputa relacionada a estes Termos deverá ser resolvida de acordo com os procedimentos de resolução de conflitos estabelecidos em [jurisdição aplicável].
+
+            9. Contato
+
+            Se você tiver perguntas sobre estes Termos, entre em contato conosco em [endereço de e-mail] ou através do nosso suporte no App.
+
+            10. Disposições Gerais
+
+            10.1 Integralidade dos Termos: Estes Termos constituem o acordo completo entre você e [Nome da Empresa] em relação ao uso do App e substituem todos os acordos anteriores ou contemporâneos, escritos ou orais.
+
+            10.2 Divisibilidade: Se qualquer disposição destes Termos for considerada inválida ou inexequível, as demais disposições continuarão em pleno vigor e efeito.
+
+            10.3 Renúncia: A falha em exigir o cumprimento de qualquer disposição destes Termos não constituirá uma renúncia a qualquer direito ou disposição.
+        </p>
+    </div>
+
+
+    <!-- Pop-up esqueci senha -->
+    <div class="popup-overlay" id="Epopup-overlay"></div>
+    <div class="popup" id="esqueci-popup" style="width: 50%; height: 360px;">
+        <span class="close-btn" id="Eclose-popup">&times;</span>
+        <h2>Redefinir a senha</h2>
+        <br>
+        <p>O link para redefinição de senha será enviado para o seu e-mail.</p>
+        <form class="form" style="margin-top: 10px;">
+            <div class="input-block">
+              <label for="login-email">E-mail</label>
+              <input id="login-email" type="email" required>
+            </div>
+            
+          <center><button type="button" class="btn btn-secondary_login btn-1"
+                              onclick="Enviar()">Enviar</button></center>
+        </form>
+    </div>
+
+
+
+    <script>
+      /*termos*/
+        const termsLink = document.getElementById('terms-link');
+        const termsPopup = document.getElementById('terms-popup');
+        const closePopup = document.getElementById('close-popup');
+        const popupOverlay = document.getElementById('popup-overlay');
+
+        // Quando o link "termos de uso" é clicado
+        termsLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            termsPopup.style.display = 'block'; // Mostra o pop-up
+            popupOverlay.style.display = 'block'; // Mostra o fundo escuro
+        });
+
+        // Quando o botão de fechar é clicado
+        closePopup.addEventListener('click', function() {
+            termsPopup.style.display = 'none'; // Esconde o pop-up
+            popupOverlay.style.display = 'none'; // Esconde o fundo escuro
+        });
+
+        // Quando o fundo escuro é clicado
+        popupOverlay.addEventListener('click', function() {
+            termsPopup.style.display = 'none'; // Esconde o pop-up
+            popupOverlay.style.display = 'none'; // Esconde o fundo escuro
+        });
+
+
+      /*esqueci a senha*/
+        // JavaScript para o pop-up
+        const esqueci = document.getElementById('esqueci-link');
+        const esqueciPopup = document.getElementById('esqueci-popup');
+        const EclosePopup = document.getElementById('Eclose-popup');
+        const EpopupOverlay = document.getElementById('Epopup-overlay');
+
+        // Quando o link "esqueci a senha" é clicado
+        esqueci.addEventListener('click', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            esqueciPopup.style.display = 'block'; // Mostra o pop-up
+            EpopupOverlay.style.display = 'block'; // Mostra o fundo escuro
+        });
+
+        // Quando o botão de fechar é clicado
+        EclosePopup.addEventListener('click', function() {
+            esqueciPopup.style.display = 'none'; // Esconde o pop-up
+            EpopupOverlay.style.display = 'none'; // Esconde o fundo escuro
+        });
+
+        // Quando o fundo escuro é clicado
+        EpopupOverlay.addEventListener('click', function() {
+            esqueciPopup.style.display = 'none'; // Esconde o pop-up
+            EpopupOverlay.style.display = 'none'; // Esconde o fundo escuro
+        });
+    </script>
+
+
+
+  <br>
+
+  <!--Footer Universal-->
+
+  <footer class="footer_uni">
+    <div class="row col">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="suporte.html"><i class="fa-solid fa-comments"></i> Fale conosco</a></li>
+
+      </ul>
+    </div>
+    <p>&copy;2024 Cloudium | All Rights Reserved</p>
+
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button onclick="topFunction()" id="backToTopBtn" title="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+      <script>
+        // Obtém o botão
+        var mybutton = document.getElementById("backToTopBtn");
+
+        // Quando o usuário rolar para baixo 20px do topo da página, mostra o botão
+        window.onscroll = function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        };
+
+        // Quando o usuário clicar no botão, rola para o topo da página
+        function topFunction() {
+          document.body.scrollTop = 0; // Para Safari
+          document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+        }
+      </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="js/sript_weather.js"></script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="js/sript_weather.js"></script>
+
+  
+<script>
+    const switchers = [...document.querySelectorAll('.switcher')]
+
+  switchers.forEach(item => {
+    item.addEventListener('click', function() {
+      switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+      this.parentElement.classList.add('is-active')
+    })
+  })
+</script>
+
+</body>
+
+</html>

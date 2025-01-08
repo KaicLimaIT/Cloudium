@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claudium</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/cdf8a73b8c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/weather.css">
+
+</head>
+
+<body class="body_local">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  
+  <!--Inicio Nav-->
+  <nav class="navbar navbar-dark stick-top p-3">
+
+    <div class="container-fluid">
+
+      <!--barra-->
+      <button src class="navbar-toggler" style="background-color: #33a3ff54" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--imagem-->
+      <a class="navbar-brand text-primary" id="btn-perfil" type="button" style="align-content: center;"
+        href="login_signup.html">
+        <i class="fa-solid fa-user"></i> Entrar
+      </a>
+
+      <div class="offcanvas offcanvas-start text-bg-dark bg-primary" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title p-2" id="offcanvasDarkNavbarLabel">Claudium</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"> <i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="local.html"><i class="fa-solid fa-location-dot"></i>
+                Localização</a>
+            </li>
+
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="favoritos.html"> <i class="fa-solid fa-heart"></i>
+                  Favoritos</a>
+              </li>
+
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="radar.html"> <i
+                      class="fa-solid fa-earth-americas"></i>
+                    Radar Meteriológico</a>
+                </li>
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="alertas.html"> <i class="fa-solid fa-bell"></i>
+                      Alertas</a>
+                  </li>
+
+
+
+        </div>
+
+        <div class="p-4">
+          <hr id="hr_nav">
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="perfil.html#configuracoes"> <i
+                  class="fa-solid fa-gear"></i>
+                Preferências</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="admin.html"> <i class="fa-solid fa-wrench"></i>
+                Página do admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="suporte.html"><i class="fa-solid fa-comments"></i>
+                Fale conosco</a>
+            </li>
+          </ul>
+        </div>
+
+        <br><br>
+
+        <p class="container-fluid p-4" id="nav_copy">&copy;2024 Cloudium | All Rights Reserved</p>
+      </div>
+    </div>
+
+  </nav>
+
+  <!--fim nav-->
+
+
+  <center>
+    <main class="main_pipi">
+      <div class="row">
+
+        <div class="col-4" style="margin-top: 100px;">
+          <div id="clima_local" style="text-align: center;">
+            <h1>Clima Local</h1>
+            <div class="location" id="localLocation">Localizando...</div>
+            <div class="temp" id="localTemperature">--°C</div>
+            <div class="description" id="localDescription">--</div>
+            <div class="error" id="localError"></div>
+          </div>
+        </div>
+
+        <div class="col-8">
+            
+          <div id="clima_api" style="margin-top: 20px; width: 80%;">
+
+            <form id="search" action="" style="border-color: white; background-color: rgba(255, 255, 255, 0.219);">
+              <i class="fa-solid fa-location-crosshairs"></i>
+                <input type="search" name="city_name" id="city_name" placeholder="buscar cidade" style="color: rgba(23, 24, 31, 0.822);">
+
+              <button type="submit" style="color: rgba(23, 24, 31, 0.822);">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+
+            <div id="weather">
+              <h1 id="title"> São Bernardo, BR</h1>
+
+              <br>
+              <div id="infos">
+                <div id="temp">
+                  <img id="temp_img" src="img/moon.png" alt="">
+
+                  <div>
+                    <p id="temp_value">
+                      6 <sup>°C</sup>
+                    </p>
+                    <p id="temp_description">
+                      Céu limpo
+                    </p>
+                  </div>
+                </div>
+
+                <div id="other_infos">
+                  <div class="info">
+                    <i id="temp_max_icon" class="fa-solid fa-temperature-high"></i>
+
+                    <div>
+                      <h2>Temp. max</h2>
+
+                      <p id="temp_max">
+                        10 <sup>°C</sup>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <i id="temp_min_icon" class="fa-solid fa-temperature-low"></i>
+
+                    <div>
+                      <h2>Temp. min</h2>
+
+                      <p id="temp_min">
+                        5 <sup>°C</sup>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <i id="humidity_icon" class="fa-solid fa-droplet"></i>
+
+                    <div>
+                      <h2>Humidade</h2>
+
+                      <p id="humidity">
+                        30%
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <i id="wind_icon" class="fa-solid fa-wind"></i>
+
+                    <div>
+                      <h2>Vento</h2>
+
+                      <p id="wind">
+                        50 km/hr
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="alert">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </center>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="js/sript_weather.js"></script>
+
+
+
+
+
+  <script>
+    const apiKey = '124e2589e26341c5a19180531241109';
+    const apiUrl = 'https://api.weatherapi.com/v1/current.json';
+
+    function fetchWeather(lat, lon, locationId, temperatureId, descriptionId, errorId) {
+      const url = `${apiUrl}?key=${apiKey}&q=${lat},${lon}&lang=pt`;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById(locationId).textContent = `${data.location.name}, ${data.location.country}`;
+          document.getElementById(temperatureId).textContent = `${data.current.temp_c}°C`;
+          document.getElementById(descriptionId).textContent = data.current.condition.text;
+          document.getElementById(errorId).textContent = ''; // Clear any previous error message
+        })
+        .catch(error => {
+          document.getElementById(locationId).textContent = '';
+          document.getElementById(temperatureId).textContent = '--°C';
+          document.getElementById(descriptionId).textContent = '--';
+          document.getElementById(errorId).textContent = `Erro ao obter o clima: ${error.message}`;
+        });
+    }
+
+
+    function handleGeolocation(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      fetchWeather(lat, lon, 'localLocation', 'localTemperature', 'localDescription', 'localError');
+    }
+
+    function handleGeolocationError(error) {
+      document.getElementById('localError').textContent = 'Erro de localização: ' + error.message;
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(handleGeolocation, handleGeolocationError);
+    } else {
+      document.getElementById('localError').textContent = 'Geolocalização não é suportada pelo seu navegador.';
+    }
+
+    document.getElementById('cityForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const city = document.getElementById('cityInput').value;
+      fetchWeatherByCity(city);
+    });
+
+  </script>
+
+
+<!--previsão de tempo-->
+<br><br><br>
+    <div id="weather-widget_previsao">
+        <h2>Previsão do Tempo</h2>
+        <div class="location-input_previsao">
+            <input type="text" id="city-input_previsao" placeholder="Digite a cidade" />
+            <button onclick="updateWeather()">Buscar</button>
+        </div>
+        <div id="weather-forecast_previsao"></div>
+    </div>
+<style>
+</style>
+<script>const apiKey2 = 'c37ee0663902c7fd943990cf9d1837d8';
+
+	async function fetchWeather2(city) {
+		const apiUrl2 = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey2}&units=metric&lang=pt_br`;
+		try {
+			const response = await fetch(apiUrl2);
+			if (!response.ok) throw new Error("Cidade não encontrada");
+			const data = await response.json();
+			displayWeather2(data);
+		} catch (error) {
+			console.error('Erro ao buscar dados do clima:', error);
+			alert("Erro: " + error.message);
+		}
+	}
+	
+	function displayWeather2(data) {
+		const forecastElement = document.getElementById('weather-forecast_previsao');
+		forecastElement.innerHTML = '';
+	
+		const dailyData = data.list.filter((reading) => reading.dt_txt.includes("12:00:00"));
+		dailyData.forEach((day) => {
+			const date = new Date(day.dt * 1000);
+			const dayName = date.toLocaleDateString('pt-BR', { weekday: 'short' });
+	
+			const weatherElement = document.createElement('div');
+			weatherElement.className = 'forecast-day_previsao';
+			weatherElement.innerHTML = `
+				<div>${dayName}</div>
+				<img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}">
+				<div>${Math.round(day.main.temp)}°C</div>
+				<div>${day.weather[0].description}</div>
+			`;
+			forecastElement.appendChild(weatherElement);
+		});
+	}
+	
+	function updateWeather2() {
+		const city = document.getElementById('city-input').value;
+		if (city) {
+			fetchWeather2(city);
+		} else {
+			alert("Por favor, insira uma cidade.");
+		}
+	}
+	
+	// Carrega previsão para cidade padrão
+	fetchWeather2('São Paulo');
+	</script>
+   
+  
+  <!--Footer Universal-->
+
+  <footer class="footer_uni">
+    <div class="row col">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="suporte.html"><i class="fa-solid fa-comments"></i> Fale conosco</a></li>
+
+      </ul>
+    </div>
+    <p>&copy;2024 Cloudium | All Rights Reserved</p>
+
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button onclick="topFunction()" id="backToTopBtn" title="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+      <script>
+        // Obtém o botão
+        var mybutton = document.getElementById("backToTopBtn");
+
+        // Quando o usuário rolar para baixo 20px do topo da página, mostra o botão
+        window.onscroll = function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        };
+
+        // Quando o usuário clicar no botão, rola para o topo da página
+        function topFunction() {
+          document.body.scrollTop = 0; // Para Safari
+          document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+        }
+      </script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="js/sript_weather.js"></script>
+</body>
+
+</html>
